@@ -1,38 +1,40 @@
-// document.getElementById("judul").innerHTML = "Form Login";
-// document.getElementsByName("username")[0].value = "Galang"
-
-const cekusername = "Galang";
-const cekpassword = "1234";
-
-
-function ceklogin(){
-    let userinput = document.getElementById("username").value;
-    let pwinput = document.getElementById("password").value;
-    if(userinput == "" || userinput == null){
-        // alert("Isi Username Anda");
-        // document.getElementById("alert").innerHTML = "Username Wajib Diisi";
-        // document.getElementById("alert").style.display = "inline";
-        textalert("alert", "Username Wajib Diisi");
-        
-    }else if(pwinput == "" || pwinput == null){
-        // alert("Isi Password Anda");
-        // document.getElementById("alert").innerHTML = "Password Wajib Diisi";
-        // document.getElementById("alert").style.display = "inline";
-        textalert("alert", "Password Wajib Diisi");
-    }else{
-        if(userinput == cekusername && pwinput == cekpassword){
-            alert("Login Berhasil");
-            window.location.href="index.html";
-        }else{
-            // alert("Login Gagal");
-            // document.getElementById("alert").innerHTML = "Login Gagal";
-            // document.getElementById("alert").style.display = "inline";
-            textalert("alert", "Login Gagal");
-        }
-    }
+function openpage(page) {
+  document.getElementById("kontenview").innerHTML = '<object type="text/html" data="' + page + '"  width="1000" height="1000"></object>';
 }
 
-function textalert(id, pesan){
-    document.getElementById(id).innerHTML = pesan;
-    document.getElementById(id).style.display = "inline-block";
+if (document.getElementById("judul")) {
+  document.getElementById("judul").innerHTML = "<b>FORM LOGIN</b>";
+  document.getElementsByName("username")[0].value = "";
+}
+const username = "admin";
+const password = "123";
+
+function ceklogin() {
+  //varibel untuk menampung data dari form login
+  let userlogin = document.getElementById("username").value;
+  let passlogin = document.getElementById("password").value;
+  if (userlogin === "" || userlogin === null) {
+    //alert("Username wajib diisi!!");
+    message("alert", "Username wajib diisi!!");
+  } else if (passlogin === "" || passlogin === null) {
+    //alert("Password wajib diisi!!");
+    message("alert", "Password wajib diisi!!");
+  } else {
+    if (userlogin === username && passlogin === password) {
+      //   alert("Login Berhasil");
+      message("alertok", "Login Berhasil");
+      window.location.href = "index.html"; //ini untuk buka atau link ke halaman index.html
+    } else {
+      message("alert", "Username dan Password tidak sesuai!!");
+    }
+  }
+}
+
+function message(id, text) {
+  document.getElementById(id).innerHTML = "<b>" + text + "</b>";
+  document.getElementById(id).style.display = "inline-block";
+}
+
+function hapus(){
+  document.getElementById("hasilkalkulator").style.display = "none";
 }

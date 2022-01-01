@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/style.css" />
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <form action="#">
+      <div class="row">
+        <div class="col-md-2">
+          <label for="nilai1" class="form-label">Nilai-1</label>
+          <input type="text" name="nilai1" id="nilai1" class="form-control" />
+        </div>
+        <div class="col-md-2">
+          <label for="nilai2" class="form-label">Nilai-2</label>
+          <input type="text" name="nilai2" id="nilai2" class="form-control" />
+        </div>
+        <div class="col-md-1">
+          <label for="action" class="form-label">Operator</label>
+          <select name="action" id="action" class="form-select">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+          </select>
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-md-5">
+          <button type="button" id="btn_hasil" class="btn btn-primary form-control" onclick="hitung()">Proses</button>
+        </div>
+      </div>
+      <hr />
+      <div class="alert alert-success mt-2" role="alert" id="hasilkalkulator" style="display: none"></div>
+      <br>
+      <button id="btnreset" type="button" class="btn btn-secondary" onclick="hapus()">Reset</button>
+    </form>
+    <!-- letakkan link ke file javascript disini -->
+    <script src="javascript/main.js"></script>
+    <script src="javascript/kalkulator.js"></script>
+  </body>
+</html>

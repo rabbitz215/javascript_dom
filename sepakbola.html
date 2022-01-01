@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/style.css" />
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- buat tampilan form disini -->
+    <h3>Pertandingan Piala AFF 2021</h3>
+    <form action="#">
+      <div class="row">
+        <div class="col-md-2">
+          <label for="skora" class="form-label">Skor Team A</label>
+          <input type="text" name="skora" id="skora" class="form-control" />
+        </div>
+        <div class="col-md-2">
+          <label for="skorb" class="form-label">Skor Team B</label>
+          <input type="text" name="skorb" id="skorb" class="form-control" />
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-md-5">
+          <button type="button" id="btn_hasil" class="btn btn-primary form-control" onclick="match()">Proses</button>
+        </div>
+      </div>
+    <!-- letakkan link ke file javascript disini -->
+    <script src="javascript/main.js"></script>
+    <script src="javascript/aff.js"></script>
+  </body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript DOM</title>
+    <title>Lat.Javascript</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="bootstrap/style.css" />
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -25,7 +25,7 @@
       </button>
       <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-          <a class="nav-link px-3" href="#">Sign out</a>
+          <a class="nav-link px-3" href="login.html">Sign out</a>
         </div>
       </div>
     </header>
@@ -37,7 +37,14 @@
           <div class="position-sticky pt-3">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"> <i class="bi bi-calculator"></i> Kalkulator </a>
+                <a class="nav-link" aria-current="page" href="#" onclick="openpage('kalkulator.html');">
+                  <i class="bi bi-calculator"></i> Kalkulator
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#" onclick="openpage('sepakbola.html');">
+                  <i class="bi bi-vinyl-fill"></i> Pertandingan Bola
+                </a>
               </li>
             </ul>
           </div>
@@ -45,47 +52,16 @@
         <!-- konten -->
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h4>Latihan JS - Operator Aritmatika</h4>
+            <h4>Latihan Javascript</h4>
           </div>
           <!-- tampilkan konten disini -->
-          <form action="#">
-            <div class="row">
-              <div class="col-md-2">
-                <label for="nilai1" class="form-label">Nilai-1</label>
-                <input type="text" name="nilai1" id="nilai1" class="form-control">
-              </div>
-              <div class="col-md-2">
-                <label for="nilai2" class="form-label">Nilai-2</label>
-                <input type="text" name="nilai2" id="nilai2" class="form-control">
-              </div>
-              <div class="col-md-2">
-                <label for="action" class="form-label">Operator</label>
-                <select name="action" id="action">
-                  <option value="+">+ (Penjumlahan)</option>
-                  <option value="-">- (Pengurangan)</option>
-                  <option value="/">/ (Pembagian)</option>
-                  <option value="*">* (Perkalian)</option>
-                  <option value="**">** (Pangkat)</option>
-                </select>
-              </div>
-            </div>
-            <div class="row pt-2">
-              <div class="col-md-4">
-                <button type="button" id="btn-hasil" class="btn btn-primary form-control" onclick="hitung()">Hitung</button>
-              </div>
-            </div>
-            <div class="row pt-2">
-              <div class="col-md-4">
-                <label for="hasil" class="form-label">Hasil</label>
-                <input type="text" name="hasil" id="hasil" class="form-control" disabled placeholder="0">
-              </div>
-            </div>
-            <div class="alert alert-success mt-3" role="alert" id="hasilkalkulator" style="display: none;"></div>
-          </form>
-          <div id="kontenview"></div>
+          <div id="kontenview">
+            
+          </div>
         </main>
       </div>
     </div>
+
     <script src="javascript/main.js"></script>
     <script src="javascript/kalkulator.js"></script>
   </body>
