@@ -1,22 +1,31 @@
+for(i = 0; i < 150; i = i + 15){
+    document.getElementById("waktu").innerHTML += "<option value='"+i+"'>"+i+" Menit</option>";
+}
+
 function match(){
     let skora = document.getElementById("skora").value;
     let skorb = document.getElementById("skorb").value;
+    let waktu = document.getElementById("waktu").value;
 
-    for(let i = 0; i <= 150; i = i + 15){
-        if(i <= 45){
-            document.write("Waktu Pertandingan : "+i+" (Babak Pertama) <br>");
-            document.write("Skor Team A : "+skora+"<br>");
-            document.write("Skor Team B : "+skorb+"<br>");
-        }else if(i >= 45 && i<=90){
-            document.write("Waktu Pertandingan : "+i+" (Babak Kedua) <br>");
-            document.write("Skor Team A : "+skora+"<br>");
-            document.write("Skor Team B : "+skorb+"<br>");
-        }else if(skora == skorb && i >= 90 ){
-            document.write("Perpanjangan Waktu 2x15 Menit <br>"+i);
-            document.write("Skor Team A : "+skora+"<br>");
-            document.write("Skor Team B : "+skorb+"<br>");
-        }else if(skora == skorb && i >= 150){
-            document.write("Adu Penalty");
-        }
+    function score(){
+        document.getElementById("kotak").innerHTML = "<h1>Score</h1>";
+        document.getElementById("kotak").innerHTML += "<h2>"+skora +" - "+skorb+"</h2>";
+    }
+    
+    if(waktu <= 45){
+        score();
+        document.getElementById("kotak").innerHTML += "<h2>Babak Pertama</h2>";
+    }else if(waktu <= 90){
+        score();
+        document.getElementById("kotak").innerHTML += "<h2>Babak Kedua</h2>";
+    }else if(skora == skorb && waktu <= 105){
+        score();
+        document.getElementById("kotak").innerHTML += "<h2>Babak Tambahan 2x15 Menit</h2>";
+    }else if(skora == skorb && waktu <= 120){
+        score();
+        document.getElementById("kotak").innerHTML += "<h2>Babak Tambahan 2x15 Menit</h2>";
+    }else if(skora == skorb && waktu <= 135){
+        score();
+        document.getElementById("kotak").innerHTML += "<h2>Adu Penalty</h2>";
     }
 }
