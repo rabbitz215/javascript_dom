@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/style.css" />
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h1>Form Pendaftaran Anggota Baru</h1>
+    <form>
+        <div class="row mb-3">
+          <label for="kdaftar" class="col-sm-2 col-form-label">Kode Pendaftaran</label>
+          <div class="col-md-4">
+            <input type="email" class="form-control" id="kdaftar" disabled>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="nama" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="ttl" class="col-sm-2 col-form-label">Tempat/Tanggal Lahir</label>
+          <div class="col-md-2">
+            <input type="text" class="form-control" id="tmptlahir" required>
+          </div>
+          <div class="col-md-3">
+            <input type="date" class="form-control" id="tgllahir" required>
+          </div>
+          <div class="col-md-1">
+              <span id="umurskrg"><b></b></span>
+          </div>
+        </div>
+        <div class="row mb-3">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-md-6">
+              <input type="email" class="form-control" id="email" required>
+            </div>
+          </div>
+        <fieldset class="row mb-3">
+          <legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="kelamin" id="kelamin" value="Laki Laki" checked>
+              <label class="form-check-label" for="lakilaki">
+                Laki Laki
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="kelamin" id="kelamin" value="Perempuan">
+              <label class="form-check-label" for="perempuan">
+                Perempuan
+              </label>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
+            <div class="col-md-6">
+              <textarea class="form-control" name="alamat" id="alamat" cols="5" rows="5" required></textarea>
+              <div class="alert alert-danger mt-2" role="alert" id="alertalamat" style="display: none">Minimal 30 Karakter</div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="row mb-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+                <button type="button" id="daftar" class="btn btn-primary form-control" onclick="pendaftaran()" >Daftar</button>
+            </div>
+          </div>
+      </form>
+      <table class="table table-bordered" id="table">
+        <thead>
+          <tr>
+            <th scope="col">Kode</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Tempat/Tanggal Lahir</th>
+            <th scope="col">Email</th>
+            <th scope="col">Jenis Kelamin</th>
+            <th scope="col">Alamat</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+            </tr>
+        </tbody>
+      </table>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/daftar.js"></script>
+</body>
+</html>
