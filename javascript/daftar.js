@@ -61,4 +61,3 @@ document.getElementById("nama").onkeyup = function () {
     let up = document.getElementById("nama");
     up.value = up.value.toUpperCase(); 
 }
-
