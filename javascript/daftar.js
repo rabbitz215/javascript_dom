@@ -55,6 +55,8 @@ function pendaftaran(){
         email.innerHTML = document.getElementById("email").value;
         kelamin.innerHTML = document.getElementById("kelamin").value;
         alamat.innerHTML = document.getElementById("alamat").value;
+
+        document.getElementById("daftar").disabled = true;
 }
 
 document.getElementById("nama").onkeyup = function () {
