@@ -7,7 +7,6 @@ document.getElementById("nama").onkeydown = function () {
 let nama = document.getElementById("nama").value;
 let kode = nama.substring(0,3);
 document.getElementById("kdaftar").value = kode + tahun;
-// console.log(kode);
 }
 
 document.getElementById("tgllahir").onchange = function () {
